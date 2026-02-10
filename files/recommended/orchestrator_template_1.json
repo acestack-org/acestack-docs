@@ -1,11 +1,12 @@
 {
   "slot_id": 1,
-  "name": "Limited-Engine",
+  "name": "Template 1",
   "config": {
     "enabled": true,
     "platform": "amd64",
+    "amd64_version": "3.2.11-py3.10",
     "arm_version": "3.2.13",
-    "memory_limit": null,
+    "memory_limit": "512m",
     "parameters": [
       {
         "name": "--client-console",
@@ -32,6 +33,336 @@
         "enabled": false
       },
       {
+        "name": "--random-port",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--upnp-nat-access",
+        "type": "flag",
+        "value": false,
+        "enabled": true
+      },
+      {
+        "name": "--nat-detect",
+        "type": "flag",
+        "value": false,
+        "enabled": true
+      },
+      {
+        "name": "--ipv6-enabled",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--ipv6-binds-v4",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--max-socket-connects",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--timeout-check-interval",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--keepalive-interval",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--port",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--download-limit",
+        "type": "int",
+        "value": 3000,
+        "enabled": true
+      },
+      {
+        "name": "--upload-limit",
+        "type": "int",
+        "value": 1000,
+        "enabled": true
+      },
+      {
+        "name": "--max-upload-slots",
+        "type": "int",
+        "value": 4,
+        "enabled": true
+      },
+      {
+        "name": "--max-connections",
+        "type": "int",
+        "value": 200,
+        "enabled": true
+      },
+      {
+        "name": "--max-peers",
+        "type": "int",
+        "value": 10,
+        "enabled": true
+      },
+      {
+        "name": "--max-peers-limit",
+        "type": "int",
+        "value": 100,
+        "enabled": false
+      },
+      {
+        "name": "--min-peers",
+        "type": "int",
+        "value": 1,
+        "enabled": true
+      },
+      {
+        "name": "--auto-slots",
+        "type": "int",
+        "value": 1,
+        "enabled": true
+      },
+      {
+        "name": "--cache-dir",
+        "type": "path",
+        "value": "",
+        "enabled": false
+      },
+      {
+        "name": "--cache-limit",
+        "type": "int",
+        "value": 256,
+        "enabled": false
+      },
+      {
+        "name": "--cache-max-bytes",
+        "type": "bytes",
+        "value": 268435456,
+        "enabled": true
+      },
+      {
+        "name": "--disk-cache-limit",
+        "type": "bytes",
+        "value": 268435456,
+        "enabled": true
+      },
+      {
+        "name": "--memory-cache-limit",
+        "type": "bytes",
+        "value": 134217728,
+        "enabled": true
+      },
+      {
+        "name": "--max-file-size",
+        "type": "bytes",
+        "value": 2147483648,
+        "enabled": true
+      },
+      {
+        "name": "--buffer-reads",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--reserve-space",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--live-cache-type",
+        "type": "string",
+        "value": "disk",
+        "enabled": true
+      },
+      {
+        "name": "--live-cache-size",
+        "type": "bytes",
+        "value": 268435456,
+        "enabled": true
+      },
+      {
+        "name": "--live-mem-cache-size",
+        "type": "bytes",
+        "value": 52428800,
+        "enabled": true
+      },
+      {
+        "name": "--live-disk-cache-size",
+        "type": "bytes",
+        "value": 268435456,
+        "enabled": true
+      },
+      {
+        "name": "--live-buffer",
+        "type": "int",
+        "value": 10,
+        "enabled": false
+      },
+      {
+        "name": "--live-buffer-time",
+        "type": "int",
+        "value": 60,
+        "enabled": true
+      },
+      {
+        "name": "--live-max-buffer-time",
+        "type": "int",
+        "value": 60,
+        "enabled": true
+      },
+      {
+        "name": "--live-adjust-buffer-time",
+        "type": "int",
+        "value": 0,
+        "enabled": true
+      },
+      {
+        "name": "--live-disable-multiple-read-threads",
+        "type": "int",
+        "value": 0,
+        "enabled": true
+      },
+      {
+        "name": "--live-stop-main-read-thread",
+        "type": "int",
+        "value": 0,
+        "enabled": true
+      },
+      {
+        "name": "--live-cache-auto-size",
+        "type": "int",
+        "value": 0,
+        "enabled": true
+      },
+      {
+        "name": "--live-cache-auto-size-reserve",
+        "type": "bytes",
+        "value": 104857600,
+        "enabled": false
+      },
+      {
+        "name": "--live-cache-max-memory-percent",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--live-aux-seeders",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--check-live-pos-interval",
+        "type": "int",
+        "value": 1,
+        "enabled": true
+      },
+      {
+        "name": "--vod-cache-type",
+        "type": "string",
+        "value": "disk",
+        "enabled": true
+      },
+      {
+        "name": "--vod-cache-size",
+        "type": "bytes",
+        "value": 536870912,
+        "enabled": true
+      },
+      {
+        "name": "--vod-buffer",
+        "type": "int",
+        "value": 5,
+        "enabled": true
+      },
+      {
+        "name": "--vod-drop-max-age",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--preload-vod",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--refill-buffer-interval",
+        "type": "int",
+        "value": 5,
+        "enabled": true
+      },
+      {
+        "name": "--log-file",
+        "type": "path",
+        "value": "",
+        "enabled": false
+      },
+      {
+        "name": "--log-debug",
+        "type": "int",
+        "value": 2,
+        "enabled": true
+      },
+      {
+        "name": "--log-max-size",
+        "type": "bytes",
+        "value": 10485760,
+        "enabled": true
+      },
+      {
+        "name": "--log-backup-count",
+        "type": "int",
+        "value": 3,
+        "enabled": true
+      },
+      {
+        "name": "--log-stdout",
+        "type": "flag",
+        "value": true,
+        "enabled": true
+      },
+      {
+        "name": "--log-stderr",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--debug-sentry",
+        "type": "flag",
+        "value": false,
+        "enabled": false
+      },
+      {
+        "name": "--enable-profiler",
+        "type": "int",
+        "value": 0,
+        "enabled": false
+      },
+      {
+        "name": "--stats-report-interval",
+        "type": "int",
+        "value": 1,
+        "enabled": true
+      },
+      {
         "name": "--stats-report-peers",
         "type": "flag",
         "value": true,
@@ -50,114 +381,6 @@
         "enabled": false
       },
       {
-        "name": "--cache-dir",
-        "type": "path",
-        "value": "~/.ACEStream",
-        "enabled": false
-      },
-      {
-        "name": "--log-file",
-        "type": "path",
-        "value": "",
-        "enabled": false
-      },
-      {
-        "name": "--live-cache-type",
-        "type": "string",
-        "value": "memory",
-        "enabled": true
-      },
-      {
-        "name": "--live-cache-size",
-        "type": "bytes",
-        "value": 268435456,
-        "enabled": true
-      },
-      {
-        "name": "--vod-cache-type",
-        "type": "string",
-        "value": "disk",
-        "enabled": true
-      },
-      {
-        "name": "--vod-cache-size",
-        "type": "bytes",
-        "value": 536870912,
-        "enabled": true
-      },
-      {
-        "name": "--vod-drop-max-age",
-        "type": "int",
-        "value": 0,
-        "enabled": false
-      },
-      {
-        "name": "--max-file-size",
-        "type": "bytes",
-        "value": 2147483648,
-        "enabled": true
-      },
-      {
-        "name": "--live-buffer",
-        "type": "int",
-        "value": 30,
-        "enabled": true
-      },
-      {
-        "name": "--vod-buffer",
-        "type": "int",
-        "value": 5,
-        "enabled": true
-      },
-      {
-        "name": "--refill-buffer-interval",
-        "type": "int",
-        "value": 5,
-        "enabled": true
-      },
-      {
-        "name": "--max-connections",
-        "type": "int",
-        "value": 200,
-        "enabled": true
-      },
-      {
-        "name": "--max-peers",
-        "type": "int",
-        "value": 40,
-        "enabled": true
-      },
-      {
-        "name": "--max-upload-slots",
-        "type": "int",
-        "value": 4,
-        "enabled": true
-      },
-      {
-        "name": "--auto-slots",
-        "type": "int",
-        "value": 1,
-        "enabled": true
-      },
-      {
-        "name": "--download-limit",
-        "type": "int",
-        "value": 0,
-        "enabled": false
-      },
-      {
-        "name": "--upload-limit",
-        "type": "int",
-        "value": 1500,
-        "enabled": true
-      },
-      {
-        "name": "--port",
-        "type": "int",
-        "value": 8621,
-        "enabled": false
-      },
-      {
         "name": "--webrtc-allow-outgoing-connections",
         "type": "int",
         "value": 0,
@@ -170,15 +393,9 @@
         "enabled": false
       },
       {
-        "name": "--stats-report-interval",
-        "type": "int",
-        "value": 1,
-        "enabled": true
-      },
-      {
         "name": "--slots-manager-use-cpu-limit",
         "type": "int",
-        "value": 0,
+        "value": 1,
         "enabled": false
       },
       {
@@ -192,31 +409,14 @@
         "type": "int",
         "value": 10,
         "enabled": true
-      },
-      {
-        "name": "--check-live-pos-interval",
-        "type": "int",
-        "value": 1,
-        "enabled": true
-      },
-      {
-        "name": "--log-debug",
-        "type": "int",
-        "value": 0,
-        "enabled": false
-      },
-      {
-        "name": "--log-max-size",
-        "type": "bytes",
-        "value": 10485760,
-        "enabled": true
-      },
-      {
-        "name": "--log-backup-count",
-        "type": "int",
-        "value": 3,
-        "enabled": true
       }
-    ]
+    ],
+    "torrent_folder_mount_enabled": false,
+    "torrent_folder_host_path": null,
+    "torrent_folder_container_path": "/root/.ACEStream/collected_torrent_files",
+    "disk_cache_mount_enabled": true,
+    "disk_cache_prune_enabled": true,
+    "disk_cache_prune_interval": 60,
+    "disk_cache_file_max_age": 5
   }
 }
