@@ -31,10 +31,7 @@ services:
     ports:
       - "19000-19099:19000-19099"
       - "8001:8001"
-      - "43110:43110"
-      - "43111:43111"
       - "5000:5000"
-      - "5001:5001"
     environment:
       - PGID=1000
       - PUID=1000
@@ -96,9 +93,6 @@ services:
     environment:
       - API_HOST=0.0.0.0
       - API_PORT=3000
-      - DISPATCHARR_BASE_URL=http://dispatcharr:9191
-      - DISPATCHARR_USER=
-      - DISPATCHARR_PASS=
       - DEBUG_MODE=false
       - CONFIG_DIR=/app/data
       - TZ=Europe/Madrid
