@@ -1,30 +1,5 @@
 services:
   ### M3U Obtaining Pipeline: Zeronet -> M3USource (microservice) -> Dispatcharr -> Endclient
-  zeronet:
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-    image: ghcr.io/krinkuto11/zeronet-eguzkilore
-    container_name: zeronet
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Madrid
-    volumes:
-      - /srv/docker/config/zeronet:/app/ZeroNet/data
-    restart: unless-stopped
-    network_mode: "container:gluetun"
-
-  m3usource:
-    image: ghcr.io/krinkuto11/m3usource:latest
-    container_name: m3usource
-    environment:
-      - FLASK_ENV=development
-    restart: always
-    network_mode: "container:gluetun"
-    depends_on:
-      dispatcharr:
-        condition: service_started
 
   dispatcharr:
     image: ghcr.io/dispatcharr/dispatcharr:latest
