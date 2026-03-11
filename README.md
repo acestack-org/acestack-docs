@@ -9,7 +9,7 @@
 Source repository for **AceStack documentation**.
 The site is statically generated with **Zensical** and published via **GitHub Pages**.
 
-🌐 **Live site:**
+ **Live site:**
 [https://acestack-org.github.io/acestack-docs/](https://acestack-org.github.io/acestack-docs/)
 
 
